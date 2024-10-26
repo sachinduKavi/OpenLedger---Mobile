@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:open_ledger/components/GeneralButton.dart';
 import 'package:open_ledger/components/Separate.dart';
+import 'package:open_ledger/screens/Registration/ui/Registration.dart';
 
 import '../../../Modules/AppColors.dart';
 
@@ -26,16 +28,26 @@ class _LoginPageState extends State<LoginPage> {
               "Login",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don't have an account ",
                   style: TextStyle(color: DarkMode.fadeText),
                 ),
-                Text(
-                  "Register",
-                  style: TextStyle(color: DarkMode.secondaryText),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => const Registration(),
+                        transition: Transition.rightToLeftWithFade);
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => const Registration()));
+                  },
+                  child: const Text(
+                    "Register",
+                    style: TextStyle(color: DarkMode.secondaryText),
+                  ),
                 ),
               ],
             ),

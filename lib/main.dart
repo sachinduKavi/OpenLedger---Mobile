@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:open_ledger/screens/LoginPage/ui/LoginPage.dart';
+import 'package:open_ledger/screens/Registration/ui/Registration.dart';
 
 main() {
   runApp(MyApp());
@@ -15,8 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const LoginPage(),
+    return GetMaterialApp(
+      home: const Registration(),
       theme: darkMode,
       debugShowCheckedModeBanner: false,
     );
