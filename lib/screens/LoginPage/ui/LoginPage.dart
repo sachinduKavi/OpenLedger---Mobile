@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:open_ledger/components/GeneralButton.dart';
+import 'package:open_ledger/components/Separate.dart';
 
 import '../../../Modules/AppColors.dart';
 
@@ -13,18 +15,18 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Login",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -37,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ],
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: TextField(
                   decoration: InputDecoration(
@@ -49,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.all(Radius.circular(10))),
               )),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(bottom: 5, left: 10, right: 10),
               child: TextField(
                   obscureText: true,
@@ -63,7 +65,49 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                   )),
             ),
-            Generalbutton()
+            Container(
+              alignment: Alignment.centerRight,
+              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              width: double.infinity,
+              child: const Text(
+                "Forget password ?",
+                style: TextStyle(color: DarkMode.fadeText),
+              ),
+            ),
+            GeneralButton(
+              horizontalMargin: 10,
+              buttonName: "Login",
+              onTap: () {},
+            ),
+            Separate(
+              text: "OR CONTINUE WITH",
+            ),
+            Row(
+              children: [
+                Expanded(
+                    child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                      margin: const EdgeInsets.all(5),
+                      height: 60,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: DarkMode.secondaryBackground),
+                      child: Image.asset("assets/images/google.png")),
+                )),
+                Expanded(
+                    child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                      margin: const EdgeInsets.all(5),
+                      height: 60,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: DarkMode.secondaryBackground),
+                      child: Image.asset("assets/images/apple.png")),
+                )),
+              ],
+            )
           ],
         ),
       ),
