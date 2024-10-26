@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:open_ledger/components/GeneralButton.dart';
 
 import '../../../Modules/AppColors.dart';
 
@@ -34,23 +35,35 @@ class _LoginPageState extends State<LoginPage> {
                   "Register",
                   style: TextStyle(color: DarkMode.secondaryText),
                 ),
-                Padding(
-                    padding: EdgeInsets.all(2),
-                    child: TextField(
-                      cursorColor: Colors.white,
-                      style:
-                          TextStyle(color: DarkMode.primaryText, fontSize: 20),
-                      decoration: InputDecoration(
-                          hintText: "User Email",
-                          hintStyle: TextStyle(color: Color(0xFF7D7690)),
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color(0xFF2D273C), width: 5),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15)))),
-                    ))
               ],
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              child: TextField(
+                  decoration: InputDecoration(
+                fillColor: Color(0xFF2D273C),
+                filled: true,
+                hintText: "Your Email",
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+              )),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 5, left: 10, right: 10),
+              child: TextField(
+                  obscureText: true,
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(
+                    fillColor: Color(0xFF2D273C),
+                    filled: true,
+                    hintText: "Password",
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.transparent),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                  )),
+            ),
+            Generalbutton()
           ],
         ),
       ),
