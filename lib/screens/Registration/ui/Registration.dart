@@ -47,7 +47,7 @@ class _RegistrationState extends State<Registration> {
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
             child: TextField(
                 decoration: InputDecoration(
-              fillColor: Color(0xFF2D273C),
+              fillColor: DarkMode.secondaryBackground,
               filled: true,
               hintText: "Enter your email",
               border: OutlineInputBorder(
@@ -61,7 +61,7 @@ class _RegistrationState extends State<Registration> {
                 obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
-                  fillColor: Color(0xFF2D273C),
+                  fillColor: DarkMode.secondaryBackground,
                   filled: true,
                   hintText: "New Password",
                   border: OutlineInputBorder(
@@ -75,11 +75,12 @@ class _RegistrationState extends State<Registration> {
                 obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
-                  fillColor: Color(0xFF2D273C),
+                  fillColor: DarkMode.secondaryBackground,
                   filled: true,
                   hintText: "Re-enter Password",
                   border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.transparent),
+                      borderSide:
+                          BorderSide(color: Colors.transparent, width: 0),
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                 )),
           ),

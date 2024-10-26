@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: TextField(
                   decoration: InputDecoration(
-                fillColor: Color(0xFF2D273C),
+                fillColor: DarkMode.secondaryBackground,
                 filled: true,
                 hintText: "Your Email",
                 border: OutlineInputBorder(
@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: true,
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
-                    fillColor: Color(0xFF2D273C),
+                    fillColor: DarkMode.secondaryBackground,
                     filled: true,
                     hintText: "Password",
                     border: OutlineInputBorder(
